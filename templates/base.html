@@ -1,0 +1,23 @@
+<!doctype html>
+{% load static %}
+
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'common.css' %}">
+  <link rel="stylesheet" href="{% static 'jquery-ui.min.css' %}">
+  <link rel="stylesheet" href="{% static 'jquery-ui.theme.min.css' %}">
+  <link rel="stylesheet" href="{% static 'jquery-ui.structure.min.css' %}">
+  {% block style %}
+  {% endblock %}
+</head>
+
+{% block body %}
+{% endblock %}
+
+<script src="{% static 'plotly-latest.min.js' %}"></script>
+<script src="{% static 'common.js' %}"></script>
+<script src="{% static 'jquery-3.4.1.js' %}"></script>
+<script src="{% static 'jquery-ui.min.js' %}"></script>
+{% block script %}
+{% endblock %}
+</html>

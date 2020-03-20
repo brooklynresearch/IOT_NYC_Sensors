@@ -1,0 +1,67 @@
+<div id="menu">
+    {% if plot_view %}
+    <div id="date-range-select">
+        <h3 id="button-header">Date Range</h3>
+        <label class = "label" for="range-start">Start Date:</label>
+        <input type="date" id="range-start" name="start">
+
+        <label class = "label" for="range-end">End Date:</label>
+        <input type="date" id="range-end" name="end">
+    </div>
+        <!--
+    <div id="cutoff-select">
+        <h3 id="button-header">Value Range</h3>
+        <label for="cutoff-high">Values Below:</label>
+        <input type="number" id="cutoff-high" name="high">
+        <label for="cutoff-low">Values Above:</label>
+        <input type="number" id="cutoff-low" name="low">
+    </div>
+        -->
+    {% endif %}
+    <div id="sensor-groups-menu">
+        <h3 id="button-header">Sensor Types</h3>
+        <hr color="white" width="90%">
+        <button class="show-group" id="show-air" >&#x25B7; Air Quality</button>
+        <div class="sensor-select" id="select-air" ></div>
+        <div class="toggle-div air-toggles">
+            <button class="toggles air-toggles" id="air-select-all">Select All</button>
+            <button class="toggles air-toggles" id="air-deselect-all">Deselect All</button>
+        </div>
+        <hr color="white" width="90%">
+        <button class="show-group" id="show-sound" >&#x25B7; Sound Level</button>
+        <div class="sensor-select" id="select-sound" ></div>
+        <div class="toggle-div" id="sound-toggles">
+            <button class="toggles sound-toggles" id="sound-select-all">Select All</button>
+            <button class="toggles sound-toggles" id="sound-deselect-all">Deselect All</button>
+        </div>
+        <hr color="white" width="90%">
+        <button class="show-group" id="show-pedcount" >&#x25B7; Ped Count</button>
+        <div class="sensor-select" id="select-pedcount" ></div>
+        <div class="toggle-div" id="pedcount-toggles">
+            <button class="toggles pedcount-toggles" id="pedcount-select-all">Select All</button>
+            <button class="toggles pedcount-toggles" id="pedcount-deselect-all">Deselect All</button>
+        </div>
+        <hr color="white" width="90%">
+        <button class="show-group" id="show-traffic" >&#x25B7; Traffic</button>
+        <div class="sensor-select" id="select-traffic" ></div>
+        <div class="toggle-div" id="traffic-toggles">
+            <button class="toggles traffic-toggles" id="traffic-select-all">Select All</button>
+            <button class="toggles traffic-toggles" id="traffic-deselect-all">Deselect All</button>
+        </div>
+    </div>
+    <!--
+    <div id="sensor-filter-list">
+        <h3 id="filter-header">Sensor Filter</h3>
+    </div>
+    -->
+    {% if plot_view %}
+    <div id="plot-options">
+        <a class='white-link' href='#' id='view-table-btn'>View Table</a>
+        <a class='white-link' href='#' id='view-map-btn'>View Map</a>
+    </div>
+    {% else %}
+    <div id="plot-options">
+        <a class='white-link' href='#' id='view-plot-btn'>View Plot</a>
+    </div>
+    {% endif %}
+</div>

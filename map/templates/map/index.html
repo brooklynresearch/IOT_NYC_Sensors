@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'map/style.css' %}">
+  <link rel="stylesheet" href="{% static 'map/leaflet.css' %}">
+{% endblock %}
+
+{% block body %}
+<body>
+    <div id="map-container">
+
+        {% include 'sensor-menu.html' with plot_view=False %}
+
+        <div id="map"></div>
+    </div>
+    <input type="hidden" id="sensor-id-list" value="{{ sensorIdList | safe}}">
+</body>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'map/leaflet.js' %}"></script>
+<!--<script src="{% static 'map/plotly-latest.min.js' %}"></script>-->
+<script src="{% static 'map/main.js' %}"></script>
+{% endblock %}

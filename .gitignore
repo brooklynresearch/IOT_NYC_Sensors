@@ -1,0 +1,8 @@
+__pycache__/
+static/
+db.sqlite3
+nohup.out
+uwsgi_params
+*.ini
+access/
+*/settings.py

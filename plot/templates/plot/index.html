@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'plot/style.css' %}">
+{% endblock %}
+
+{% block body %}
+<body>
+    <div id="main-container">
+
+        {% include 'sensor-menu.html' with plot_view=True %}
+
+        <div id="plot-container">
+            <div id="plot"></div>
+            <div id='plot-instructions'>
+                <ul>
+                    <li>Use the menu on the left to select and filter sensor data</li>
+                    <li>Draw a box on the plot to zoom in</li>
+                    <li>Double-lick to zoom back out</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <input type="hidden" id="sensor-id-list" value="{{ sensorIdList | safe}}">
+</body>
+{% endblock %}
+
+{% block script %}
+<!--<script src="{% static 'plot/plotly-latest.min.js' %}"></script>-->
+<script src="{% static 'plot/main.js' %}"></script>
+{% endblock %}

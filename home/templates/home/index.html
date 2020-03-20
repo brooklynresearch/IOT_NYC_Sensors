@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+</head>
+
+<body>
+    <h1 id='page-title'>Smart City IoT Dashboard</h1>
+    <div id='container'>
+        <div id='map-btn'>
+            <a href='/map/'>
+                <img src="{% static 'home/images/iotpoc-map.png' %}">
+            </a>
+            <p>IoT Device Map</p>
+        </div>
+
+        <div id='plot-btn'>
+            <a href='/plot/'>
+                <img src="{% static 'home/images/iotpoc-device-data.png' %}">
+            </a>
+            <p>IoT Device Data</p>
+        </div>
+    </div>
+    <div id='compat-notice'>NOTE: This site is compatible with thie latest versions of Chrome, Firefox, and Edge</div>
+</body>
