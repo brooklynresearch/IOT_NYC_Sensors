@@ -6,7 +6,7 @@ Django==2.1.5
 docutils==0.14
 idna==2.8
 jmespath==0.9.3
-numpy==1.16.0
+numpy==1.22.0
 paho-mqtt==1.4.0
 pandas==0.23.4
 psycopg2-binary==2.7.7
